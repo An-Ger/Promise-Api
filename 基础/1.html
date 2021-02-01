@@ -24,16 +24,16 @@
           const p = new Promise((resolve, reject) => {
             setTimeout(() => {
               let n = rand(1, 100);
-              if (n <= 30) resolve();
-              else reject();
+              if (n <= 30) resolve(n);
+              else reject(n);
             }, 1000);
           });
           p.then(
-            () => {
-              console.log("success");
+            (value) => {
+              console.log("success" + value);
             },
-            () => {
-              console.log("Do It Again");
+            (reason) => {
+              console.log("Do It Again" + reason);
             }
           );
         };
