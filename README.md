@@ -1,2 +1,7 @@
 # Promise-Api
 Promise基础使用
+fs文件，数据库操作
+Promise支持链式调用，解决回调地狱
+Promise实例化需要接收一个函数，函数必须有两个形参resolve解决,reject拒绝,Promise包裹一个异步函数
+两个形参都是函数类型的数据，成功调用resolve，失败调用reject,返回一个promise对象
+该对象可以调用两个回调函数，第一个是成功的回调，第二个则是失败的
